@@ -11,6 +11,7 @@ export function NavBar() {
         <Link to="/" className="font-semibold">Disaster Alert</Link>
 
         <Link to="/alerts" className="text-sm">Alerts</Link>
+        <Link to="/disasters" className="text-sm">Disasters</Link>
         <Link to="/sos" className="text-sm">SOS</Link>
         <Link to="/map" className="text-sm">Map</Link>
 
@@ -18,6 +19,7 @@ export function NavBar() {
           <>
             <Link to="/admin/users" className="text-sm">Admin Users</Link>
             <Link to="/admin/alerts" className="text-sm">Create Alert</Link>
+            <Link to="/admin/disasters" className="text-sm">Admin Disasters</Link>
           </>
         )}
 

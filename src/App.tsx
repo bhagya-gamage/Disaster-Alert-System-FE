@@ -6,9 +6,11 @@ import { NavBar } from "./components/NavBar";
 import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
 import { AlertsPage } from "./pages/AlertsPage";
+import { DisastersPage } from "./pages/DisastersPage";
 import { MapPage } from "./pages/MapPage";
 import { SosPage } from "./pages/SosPage";
 import { AdminCreateAlertPage } from "./pages/admin/AdminCreateAlertPage";
+import { AdminDisastersPage } from "./pages/admin/AdminDisastersPage";
 import { AdminUsersPage } from "./pages/admin/AdminUsersPage";
 
 function AppLayout() {
@@ -31,11 +33,13 @@ export function App() {
           <Route element={<AppLayout />}>
             <Route path="/" element={<Navigate to="/alerts" replace />} />
             <Route path="/alerts" element={<AlertsPage />} />
+            <Route path="/disasters" element={<DisastersPage />} />
             <Route path="/sos" element={<SosPage />} />
             <Route path="/map" element={<MapPage />} />
 
             <Route element={<RequireRole anyOf={["ADMIN"]} />}>
               <Route path="/admin/alerts" element={<AdminCreateAlertPage />} />
+              <Route path="/admin/disasters" element={<AdminDisastersPage />} />
               <Route path="/admin/users" element={<AdminUsersPage />} />
             </Route>
           </Route>
