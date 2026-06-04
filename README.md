@@ -2,29 +2,6 @@
 
 Frontend for the Spring Boot REST API: `bhagya-gamage/Disaster-Alert-System`.
 
-## Requirements
-- Node.js 20+
-
-## Setup
-```bash
-npm install
-```
-
-## Run
-```bash
-npm run dev
-```
-
-## Configure API base URL
-Create a `.env` file:
-```bash
-VITE_API_BASE_URL=http://localhost:8080
-```
-
-## Auth
-- Login: `POST /api/auth/login`
-- Register: `POST /api/auth/register`
-
 JWT is stored in `localStorage` and added to requests as:
 `Authorization: Bearer <token>`
 
