@@ -4,6 +4,7 @@ import { useAuth } from "../auth/AuthContext";
 export function NavBar() {
   const { roles, logout } = useAuth();
   const isAdmin = roles.includes("ADMIN");
+  const isShelterManagerOrAdmin = roles.includes("SHELTER_MANAGER") || roles.includes("ADMIN");
 
   return (
     <div className="w-full border-b bg-white">
@@ -12,6 +13,8 @@ export function NavBar() {
 
         <Link to="/alerts" className="text-sm">Alerts</Link>
         <Link to="/disasters" className="text-sm">Disasters</Link>
+        <Link to="/shelters" className="text-sm">Shelters</Link>
+        <Link to="/resources" className="text-sm">Resources</Link>
         <Link to="/sos" className="text-sm">SOS</Link>
         <Link to="/map" className="text-sm">Map</Link>
 
@@ -21,6 +24,10 @@ export function NavBar() {
             <Link to="/admin/alerts" className="text-sm">Create Alert</Link>
             <Link to="/admin/disasters" className="text-sm">Admin Disasters</Link>
           </>
+        )}
+
+        {isShelterManagerOrAdmin && (
+          <Link to="/manager/shelters" className="text-sm">Manage Shelters</Link>
         )}
 
         <div className="flex-1" />
