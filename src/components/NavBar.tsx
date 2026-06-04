@@ -11,6 +11,7 @@ export function NavBar() {
         <Link to="/" className="font-semibold">Disaster Alert</Link>
 
         <Link to="/alerts" className="text-sm">Alerts</Link>
+        <Link to="/sos" className="text-sm">SOS</Link>
         <Link to="/map" className="text-sm">Map</Link>
 
         {isAdmin && (

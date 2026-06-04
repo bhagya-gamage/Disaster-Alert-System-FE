@@ -7,6 +7,7 @@ import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
 import { AlertsPage } from "./pages/AlertsPage";
 import { MapPage } from "./pages/MapPage";
+import { SosPage } from "./pages/SosPage";
 import { AdminCreateAlertPage } from "./pages/admin/AdminCreateAlertPage";
 import { AdminUsersPage } from "./pages/admin/AdminUsersPage";
 
@@ -30,6 +31,7 @@ export function App() {
           <Route element={<AppLayout />}>
             <Route path="/" element={<Navigate to="/alerts" replace />} />
             <Route path="/alerts" element={<AlertsPage />} />
+            <Route path="/sos" element={<SosPage />} />
             <Route path="/map" element={<MapPage />} />
 
             <Route element={<RequireRole anyOf={["ADMIN"]} />}>
